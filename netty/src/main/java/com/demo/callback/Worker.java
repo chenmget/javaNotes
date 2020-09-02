@@ -8,6 +8,5 @@ package com.demo.callback;
  **/
 public class Worker {
     public void doWork(){
-        Fetcher
     }
 }
