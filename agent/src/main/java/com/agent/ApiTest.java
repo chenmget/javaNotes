@@ -9,5 +9,10 @@ package com.agent;
 public class ApiTest {
     public static void main(String[] args) {
         System.out.println("hello word");
+        ApiTest apiTest = new ApiTest();
+        apiTest.echoHi();
+    }
+    private void echoHi(){
+        System.out.println("hi agent");
     }
 }
