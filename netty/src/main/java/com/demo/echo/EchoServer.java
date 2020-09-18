@@ -7,8 +7,11 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import io.netty.handler.codec.LineBasedFrameDecoder;
+import io.netty.handler.codec.string.StringDecoder;
 
 import java.net.InetSocketAddress;
+import java.nio.charset.Charset;
 
 /**
  * @program: javaNotes
@@ -38,6 +41,13 @@ public class EchoServer {
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         protected void initChannel(SocketChannel ch) throws Exception {
+                            ch.pipeline().addLast(new LineBasedFrameDecoder(1024));
+                            // 基于指定字符串【换行符，这样功能等同于LineBasedFrameDecoder】
+                            // e.pipeline().addLast(new DelimiterBasedFrameDecoder(1024, false, Delimiters.lineDelimiter()));
+                            // 基于最大长度
+                            // e.pipeline().addLast(new FixedLengthFrameDecoder(4));
+                            // 解码转String，注意调整自己的编码格式GBK、UTF-8
+                            ch.pipeline().addLast(new StringDecoder(Charset.forName("GBK")));
                             ch.pipeline().addLast(serverHandler);
                         }
                     });

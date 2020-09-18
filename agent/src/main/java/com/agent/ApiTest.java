@@ -13,7 +13,7 @@ public class ApiTest {
         apiTest.echoHi();
 
 
-//        //线程一
+        //线程一
 //        new Thread(() -> new ApiTest().http_lt1()).start();
 //
 //        //线程二
