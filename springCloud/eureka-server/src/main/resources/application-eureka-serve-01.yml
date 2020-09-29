@@ -1,0 +1,14 @@
+server:
+  port: 8759
+
+spring:
+  profiles: eureka-serve-01
+
+eureka:
+  instance:
+    hostname: eureka-serve-01
+    instance-id: eureka-serve-01
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://eureka-serve-02:8760/eureka/,http://eureka-serve-03:8761/eureka/
