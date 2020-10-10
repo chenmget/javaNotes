@@ -11,3 +11,25 @@ spring:
 
 server:
   port: 8082  #应为我这里是将服务起在一台电脑, 和生产者的tomcat端口区分以免冲突
+
+seata:
+enabled: true
+application-id: consumer
+tx-service-group: my_test_tx_group
+enable-auto-data-source-proxy: true
+config:
+  type: nacos
+  nacos:
+    namespace:
+    serverAddr: 127.0.0.1:8848
+    group: SEATA_GROUP
+    userName: "nacos"
+    password: "nacos"
+registry:
+  type: nacos
+  nacos:
+    application: seata-server
+    server-addr: 127.0.0.1:8848
+    namespace:
+    userName: "nacos"
+    password: "nacos"
