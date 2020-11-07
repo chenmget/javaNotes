@@ -1,6 +1,7 @@
-package com.dubbo.main;
+package com.dubbo;
 
 import com.alibaba.dubbo.config.spring.context.annotation.EnableDubbo;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -11,11 +12,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @create: 2020-09-18 16:12
  **/
 @SpringBootApplication
-@EnableDubbo  //启动dubbo的配置
-public class DubboConsumerApplication {
-
+@EnableDubbo
+@MapperScan("mapper")
+public class DubboProducerApplication {
     public static void main(String[] args) {
-        SpringApplication.run(DubboConsumerApplication.class, args);
+        SpringApplication.run(DubboProducerApplication.class, args);
     }
 
 }

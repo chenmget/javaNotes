@@ -1,6 +1,7 @@
-package com.dubbo.consumer.controller;
+package com.demo.controller;
 
-import com.dubbo.consumer.service.OrderService;
+
+import com.demo.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,19 +17,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
 
-
     @Autowired
     private OrderService orderService;
 
-//    @RequestMapping("/getUserById")
-//    public Object getUserById (){
-//        return userService.getUserById();
-//    }
 
     @RequestMapping("/addUser")
     public void addUser (){
-        String userId = "2";
+        String userId = "1";
         orderService.addOrder(userId);
-
     }
 }

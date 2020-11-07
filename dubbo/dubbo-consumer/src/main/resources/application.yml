@@ -9,27 +9,38 @@ spring:
       port: 20880
     scan: com.dubbo
 
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/mydemo?characterEncoding=utf-8&useSSL=false
+    username: root
+    password: root #数据库驱动
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true #开启驼峰命名法
+  mapperLocations: classpath:mapper/*.xml
+
 server:
   port: 8082  #应为我这里是将服务起在一台电脑, 和生产者的tomcat端口区分以免冲突
 
 seata:
-enabled: true
-application-id: consumer
-tx-service-group: my_test_tx_group
-enable-auto-data-source-proxy: true
-config:
-  type: nacos
-  nacos:
-    namespace:
-    serverAddr: 127.0.0.1:8848
-    group: SEATA_GROUP
-    userName: "nacos"
-    password: "nacos"
-registry:
-  type: nacos
-  nacos:
-    application: seata-server
-    server-addr: 127.0.0.1:8848
-    namespace:
-    userName: "nacos"
-    password: "nacos"
+  enabled: true
+  application-id: consumer
+  tx-service-group: my_test_tx_group
+  enable-auto-data-source-proxy: true
+  config:
+    type: nacos
+    nacos:
+      namespace:
+      serverAddr: 127.0.0.1:8848
+      group: SEATA_GROUP
+      userName: "nacos"
+      password: "nacos"
+  registry:
+    type: nacos
+    nacos:
+      application: seata-server
+      server-addr: 127.0.0.1:8848
+      namespace:
+      userName: "nacos"
+      password: "nacos"

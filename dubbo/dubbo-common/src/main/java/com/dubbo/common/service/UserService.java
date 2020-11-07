@@ -10,4 +10,8 @@ import com.dubbo.common.model.User;
  **/
 public interface UserService {
     User getUserById();
+
+    void addUser(String userId);
+
+
 }
