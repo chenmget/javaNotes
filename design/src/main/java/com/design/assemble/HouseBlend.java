@@ -6,5 +6,13 @@ package com.design.assemble;
  * @author: cm
  * @create: 2020-11-10 11:20
  **/
-public class HouseBlend {
+public class HouseBlend extends Beverage {
+    public HouseBlend() {
+        desc = "houseblend";
+    }
+
+    @Override
+    public double cost() {
+        return 0.89;
+    }
 }

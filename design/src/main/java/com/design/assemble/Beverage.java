@@ -6,5 +6,12 @@ package com.design.assemble;
  * @author: cm
  * @create: 2020-11-10 11:14
  **/
-public class Beverage {
+public abstract class Beverage {
+    String desc = "unknow beverage";
+
+    public  String getDescription(){
+        return desc;
+    }
+
+    public abstract double cost();
 }

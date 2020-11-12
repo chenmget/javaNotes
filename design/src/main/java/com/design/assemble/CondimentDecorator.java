@@ -6,5 +6,6 @@ package com.design.assemble;
  * @author: cm
  * @create: 2020-11-10 11:15
  **/
-public class CondimentDecorator {
+public abstract class CondimentDecorator extends Beverage{
+    public abstract String getDescription();
 }
