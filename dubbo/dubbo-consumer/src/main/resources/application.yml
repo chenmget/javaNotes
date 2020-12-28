@@ -20,6 +20,13 @@ mybatis:
     map-underscore-to-camel-case: true #开启驼峰命名法
   mapperLocations: classpath:mapper/*.xml
 
+  sleuth:
+    enabled: true
+    sampler:
+      probability: 1
+    zipkin:
+      sender:
+        type: web #向kafka发送trace信息
 server:
   port: 8082  #应为我这里是将服务起在一台电脑, 和生产者的tomcat端口区分以免冲突
 

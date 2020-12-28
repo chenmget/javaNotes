@@ -1,0 +1,2 @@
+zipkinConsumerDubboFilter=com.dubbo.common.filter.DubboZipkinConsumerFilter
+zipkinProviderDubboFilter=com.dubbo.common.filter.DubboZipkinProviderFilter
