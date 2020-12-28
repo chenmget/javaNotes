@@ -3,6 +3,7 @@ package com.demo.controller;
 
 import com.demo.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,17 +14,17 @@ import org.springframework.web.bind.annotation.RestController;
  * @create: 2020-09-18 16:14
  **/
 @RestController
-@RequestMapping("/user")
-public class UserController {
+@RequestMapping("/order")
+public class OrderController {
 
 
     @Autowired
     private OrderService orderService;
 
 
-    @RequestMapping("/addUser")
-    public void addUser (){
-        String userId = "1";
-        orderService.addOrder(userId);
+    @RequestMapping("/addOrder")
+    @GetMapping
+    public void addOrder (String orderId){
+        orderService.addOrder(orderId);
     }
 }

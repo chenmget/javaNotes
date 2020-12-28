@@ -10,6 +10,6 @@ import org.apache.ibatis.annotations.Mapper;
  * @create: 2020-10-10 21:34
  **/
 @Mapper
-public interface OrderMapper {
-    void insert(String orderId);
+public interface UserMapper {
+    void insert(String userId);
 }

@@ -1,9 +1,11 @@
 package com.demo.service.impl;
 
 import com.demo.mapper.OrderMapper;
+import com.demo.mapper.UserMapper;
 import com.demo.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @program: javaNotes
@@ -17,8 +19,22 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     public OrderMapper orderMapper;
 
+    @Autowired
+    public UserMapper userMapper;
+
     @Override
-    public void addOrder(String userId) {
-        orderMapper.insert(userId);
+    @Transactional
+    public void addOrder(String orderId) {
+        insertOrder(orderId);
+        addUser();
+    }
+
+    private void addUser(){
+        String userId = "1";
+        userMapper.insert(userId);
+    }
+
+    private void insertOrder(String orderId){
+        orderMapper.insert(orderId);
     }
 }
