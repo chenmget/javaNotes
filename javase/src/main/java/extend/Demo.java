@@ -8,7 +8,10 @@ package extend;
  **/
 public class Demo {
     public static void main(String[] args) {
-        A a = new B();
+        //A a = new B();
+        int i=12;
+        i=i++;
+        System.out.println(i);
     }
 }
 
