@@ -1,7 +1,7 @@
 package com.demo.controller;
 
 
-import com.demo.service.OrderService;
+import com.demo.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,17 +14,17 @@ import org.springframework.web.bind.annotation.RestController;
  * @create: 2020-09-18 16:14
  **/
 @RestController
-@RequestMapping("/order")
+@RequestMapping("/test")
 public class TestController {
 
 
     @Autowired
-    private OrderService orderService;
+    private TestService testService;
 
 
-    @RequestMapping("/addOrder")
+    @RequestMapping("/add")
     @GetMapping
-    public void addOrder (String orderId){
-        orderService.addOrder(orderId);
+    public void add (String id){
+        testService.add(id);
     }
 }

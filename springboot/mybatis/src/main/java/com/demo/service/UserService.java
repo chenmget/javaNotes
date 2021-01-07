@@ -1,5 +1,7 @@
 package com.demo.service;
 
-public interface OrderService {
-    public void addOrder(String userId);
+public interface UserService {
+    public void addUser(String userId);
+
+    public void addUserError(String userId);
 }

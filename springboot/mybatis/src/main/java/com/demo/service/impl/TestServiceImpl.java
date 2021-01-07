@@ -1,8 +1,8 @@
 package com.demo.service.impl;
 
-import com.demo.mapper.OrderMapper;
-import com.demo.mapper.UserMapper;
 import com.demo.service.OrderService;
+import com.demo.service.TestService;
+import com.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,27 +14,25 @@ import org.springframework.transaction.annotation.Transactional;
  * @create: 2020-10-10 21:17
  **/
 @Service
-public class OrderServiceImpl implements OrderService {
+public class TestServiceImpl implements TestService {
 
     @Autowired
-    public OrderMapper orderMapper;
+    public OrderService orderService;
 
     @Autowired
-    public UserMapper userMapper;
+    public UserService userService;
 
     @Override
     @Transactional
-    public void addOrder(String orderId) {
-        insertOrder(orderId);
-        addUser();
+    public void add(String orderId) {
+        orderService.addOrder(orderId);
+        try{
+            userService.addUserError(orderId);
+        }catch (Exception e){
+            System.out.println("报错啦");
+        }
+
     }
 
-    private void addUser(){
-        String userId = "1";
-        userMapper.insert(userId);
-    }
 
-    private void insertOrder(String orderId){
-        orderMapper.insert(orderId);
-    }
 }
