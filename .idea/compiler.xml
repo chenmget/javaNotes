@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="agent" />
+        <module name="dubbo-common" />
+        <module name="dubbo-consumer" />
+        <module name="dubbo-provider" />
+        <module name="javase" />
+        <module name="leetcode" />
+        <module name="netty" />
+        <module name="thread" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="agent" target="1.8" />
+      <module name="dubbo" target="1.8" />
+      <module name="dubbo-common" target="1.8" />
+      <module name="dubbo-consumer" target="1.8" />
+      <module name="dubbo-provider" target="1.8" />
+      <module name="javase" target="1.5" />
+      <module name="leetcode" target="1.8" />
+      <module name="netty" target="1.8" />
+      <module name="thread" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
