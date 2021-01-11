@@ -27,4 +27,10 @@ public class TestController {
     public void add (String id){
         testService.add(id);
     }
+
+    @RequestMapping("/select")
+    @GetMapping
+    public String  select (String id){
+        return testService.select(id);
+    }
 }

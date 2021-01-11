@@ -24,5 +24,12 @@ public class OrderServiceImpl implements OrderService {
         orderMapper.insert(orderId);
     }
 
+    @Override
+    public void select(String id) {
+        String i = orderMapper.select("1");
+        System.out.println(i);
+        orderMapper.select("1");
+    }
+
 
 }
