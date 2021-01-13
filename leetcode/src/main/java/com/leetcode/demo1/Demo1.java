@@ -16,7 +16,59 @@ public class Demo1 {
 //        System.out.println(d.lengthOfLongestSubstring(s));
 //        System.out.println(d.longestPalindrome("babad"));
 //        System.out.println(d.convert("PAYPALISHIRING",4));
-        System.out.println(d.reverse(321));
+//        System.out.println(d.reverse(321));
+//        System.out.println(d.intToRoman(20));
+        System.out.println(d.romanToInt("MCMXCIV"));
+    }
+
+    public int romanToInt(String s) {
+        int rst = 0;
+        char[] chars = s.toCharArray();
+        for(int i=0;i<chars.length;i++){
+            char c = chars[i];
+            int val =getValue(c);
+            int nextval=-1;
+            if(i!=chars.length-1){
+                nextval = getValue(chars[i+1]);
+            }
+            if(nextval==-1||val>=nextval){
+                rst+=val;
+            }else{
+                rst-=val;
+            }
+
+
+        }
+        return rst;
+    }
+
+    private int getValue(char ch) {
+        switch(ch) {
+            case 'I': return 1;
+            case 'V': return 5;
+            case 'X': return 10;
+            case 'L': return 50;
+            case 'C': return 100;
+            case 'D': return 500;
+            case 'M': return 1000;
+            default: return 0;
+        }
+    }
+
+
+    public String intToRoman(int num) {
+        int[] nums = new int[]{1,4,5,9,10,40,50,90,100,400,500,900,1000};
+        String[] roman = new String[]{"I","IV","V","IX","X","XL","L","XC","C","CD","D","CM","M"};
+        StringBuffer rst = new StringBuffer();
+        while(num!=0){
+            for(int i=nums.length-1;i>=0;i--) {
+                while(num-nums[i]>=0){
+                    num=num-nums[i];
+                    rst.append(roman[i]);
+                }
+            }
+        }
+        return rst.toString();
     }
 
     public int reverse(int x) {
