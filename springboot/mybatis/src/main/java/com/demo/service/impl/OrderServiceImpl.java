@@ -4,6 +4,8 @@ import com.demo.mapper.OrderMapper;
 import com.demo.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @program: javaNotes
@@ -19,7 +21,7 @@ public class OrderServiceImpl implements OrderService {
 
 
     @Override
-    //@Transactional(propagation = Propagation.REQUIRED)
+    @Transactional(propagation = Propagation.REQUIRED)
     public void addOrder(String orderId) {
         orderMapper.insert(orderId);
     }

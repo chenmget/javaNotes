@@ -1,9 +1,8 @@
 package com.leetcode.demo1;
 
-import com.leetcode.model.ListNode;
-
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class Demo1 {
@@ -16,9 +15,21 @@ public class Demo1 {
 //        String s = "pwwkew";
 //        System.out.println(d.lengthOfLongestSubstring(s));
 //        System.out.println(d.longestPalindrome("babad"));
-        System.out.println(d.convert("PAYPALISHIRING",4));
+//        System.out.println(d.convert("PAYPALISHIRING",4));
+        System.out.println(d.reverse(321));
     }
 
+    public int reverse(int x) {
+        long rst=0;
+        while(x!=0){
+            rst=rst*10+x%10;
+            x=x/10;
+        }
+        if(rst!=(int)rst){
+            return 0;
+        }
+        return (int)rst;
+    }
 
 
 //    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
@@ -78,49 +89,40 @@ public class Demo1 {
     }
 
     public String convert(String s, int numRows) {
-        int n =s.length();
-        int y = s.length();
-        if(numRows!=1){
-            y = n/(numRows-1);
+        List<StringBuffer> list = new ArrayList<>();
+        if(numRows==1){
+            return s;
         }
-        Character[][] array=new Character[numRows][y+1];
-        int i=0;
-        int j=0;
-        boolean add = true;
+        for(int i =0;i<numRows;i++){
+            list.add(new StringBuffer());
+        }
         char[] chars = s.toCharArray();
+        int n =s.length();
+        boolean add = true;
+        int i=0;
         for(int k=0;k<n;k++){
-            array[i][j]=chars[k];
-            if(numRows==1){
-                j++;
-            }else{
-                if(add){
-                    if(i+1>=numRows){
-                        add=false;
-                        i--;
-                    }else{
-                        i++;
-                    }
+            StringBuffer sb = list.get(0);
+            sb.append(chars[k]);
+            if(add){
+                if(i+1>=numRows){
+                    add=false;
+                    i--;
                 }else{
-                    if(i-1<0){
-                        add=true;
-                        i++;
-                    }else{
-                        i--;
-                    }
+                    i++;
+                }
+            }else{
+                if(i-1<0){
+                    add=true;
+                    i++;
+                }else{
+                    i--;
                 }
             }
-            j=k/(numRows-1);
-
         }
         StringBuffer ans = new StringBuffer();
-        for(int k=0;k<numRows;k++){
-            for(int z=0;z<y;z++){
-                if(array[k][z]!=null){
-                    ans.append(array[k][z]);
-                }
-            }
+        for(int k=0;k<list.size();k++) {
+            ans.append(list.get(k));
         }
-
         return ans.toString();
     }
 

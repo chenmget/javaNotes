@@ -26,6 +26,7 @@ public class TestController {
     @GetMapping
     public void add (String id){
         testService.add(id);
+        System.out.println("success");
     }
 
     @RequestMapping("/select")
