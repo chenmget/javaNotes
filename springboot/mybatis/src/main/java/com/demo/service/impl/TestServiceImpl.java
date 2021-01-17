@@ -26,12 +26,8 @@ public class TestServiceImpl implements TestService {
     @Transactional
     public void add(String orderId) {
         orderService.addOrder(orderId);
-        try{
-            userService.addUserError(orderId);
-        }catch (Exception e){
-            System.out.println("报错啦");
-        }
-
+        userService.addUser(orderId);
+        int i=9/0;
     }
 
     @Override
