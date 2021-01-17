@@ -16,7 +16,7 @@ public class Demo1 {
 //        String s = "pwwkew";
 //        System.out.println(d.lengthOfLongestSubstring(s));
 //        System.out.println(d.longestPalindrome("babad"));
-        System.out.println(d.convert("PAYPALISHIRING",4));
+        System.out.println(d.convert("A",1));
     }
 
 
@@ -81,9 +81,9 @@ public class Demo1 {
         int n =s.length();
         int y = s.length();
         if(numRows!=1){
-            y = n/(numRows-1);
+            y = n/(numRows-1)+1;
         }
-        Character[][] array=new Character[numRows][y+1];
+        Character[][] array=new Character[numRows][y];
         int i=0;
         int j=0;
         boolean add = true;
@@ -108,8 +108,15 @@ public class Demo1 {
                         i--;
                     }
                 }
+                for(int t=0;t<=y+1;t++){
+                    if(array[i][t]==null){
+                        j=t;
+                        break;
+                    }
+                }
             }
-            j=k/(numRows-1);
+
+
 
         }
         StringBuffer ans = new StringBuffer();
