@@ -18,8 +18,36 @@ public class Demo1 {
 //        System.out.println(d.convert("PAYPALISHIRING",4));
 //        System.out.println(d.reverse(321));
 //        System.out.println(d.intToRoman(20));
-        System.out.println(d.romanToInt("MCMXCIV"));
+//        System.out.println(d.romanToInt("MCMXCIV"));
+        String[] strs = new String[]{"ab","a"};
+        System.out.println(d.longestCommonPrefix(strs));
     }
+
+    public List<List<Integer>> threeSum(int[] nums) {
+        List<List<Integer>> rst = new ArrayList<>();
+
+        return rst;
+    }
+
+
+    public String longestCommonPrefix(String[] strs) {
+        StringBuffer rst = new StringBuffer();
+        if(strs.length==0){
+            return "";
+        }
+        for(int i=0;i<strs[0].length();i++){
+            char c = strs[0].charAt(i);
+            for(int j=1;j<strs.length;j++){
+                if(strs[j].length()<=i||strs[j].charAt(i)!=c){
+                    return rst.toString();
+                }
+            }
+            rst.append(c);
+        }
+
+        return rst.toString();
+    }
+
 
     public int romanToInt(String s) {
         int rst = 0;
