@@ -3,15 +3,30 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/agent/agent.iml" filepath="$PROJECT_DIR$/agent/agent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot/aop/aop.iml" filepath="$PROJECT_DIR$/springboot/aop/aop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/design/design.iml" filepath="$PROJECT_DIR$/design/design.iml" />
       <module fileurl="file://$PROJECT_DIR$/dubbo/dubbo.iml" filepath="$PROJECT_DIR$/dubbo/dubbo.iml" />
       <module fileurl="file://$PROJECT_DIR$/dubbo/dubbo-common/dubbo-common.iml" filepath="$PROJECT_DIR$/dubbo/dubbo-common/dubbo-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/dubbo/dubbo-consumer/dubbo-consumer.iml" filepath="$PROJECT_DIR$/dubbo/dubbo-consumer/dubbo-consumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/dubbo/dubbo-provider/dubbo-provider.iml" filepath="$PROJECT_DIR$/dubbo/dubbo-provider/dubbo-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springCloud/eureka-client/eurekaclient.iml" filepath="$PROJECT_DIR$/springCloud/eureka-client/eurekaclient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springCloud/eureka-server/eurekaserver.iml" filepath="$PROJECT_DIR$/springCloud/eureka-server/eurekaserver.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/javaNotes.iml" filepath="$PROJECT_DIR$/.idea/javaNotes.iml" />
       <module fileurl="file://$PROJECT_DIR$/javase/javase.iml" filepath="$PROJECT_DIR$/javase/javase.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode/leetcode.iml" filepath="$PROJECT_DIR$/leetcode/leetcode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot/mybatis/mybatis.iml" filepath="$PROJECT_DIR$/springboot/mybatis/mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/netty/netty.iml" filepath="$PROJECT_DIR$/netty/netty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot/redisson/redisson.iml" filepath="$PROJECT_DIR$/springboot/redisson/redisson.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springCloud/service-feign/servicefeign.iml" filepath="$PROJECT_DIR$/springCloud/service-feign/servicefeign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springCloud/service-lucy/servicelucy.iml" filepath="$PROJECT_DIR$/springCloud/service-lucy/servicelucy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springCloud/service-ribbon/serviceribbon.iml" filepath="$PROJECT_DIR$/springCloud/service-ribbon/serviceribbon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springCloud/service-zuul/servicezuul.iml" filepath="$PROJECT_DIR$/springCloud/service-zuul/servicezuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springCloud/springCloud.iml" filepath="$PROJECT_DIR$/springCloud/springCloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot/springboot.iml" filepath="$PROJECT_DIR$/springboot/springboot.iml" />
       <module fileurl="file://$PROJECT_DIR$/thread/thread.iml" filepath="$PROJECT_DIR$/thread/thread.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zipkin/zipkin.iml" filepath="$PROJECT_DIR$/zipkin/zipkin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zipkin/zipkin-server1/zipkinserver1.iml" filepath="$PROJECT_DIR$/zipkin/zipkin-server1/zipkinserver1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zipkin/zipkin-server2/zipkinserver2.iml" filepath="$PROJECT_DIR$/zipkin/zipkin-server2/zipkinserver2.iml" />
     </modules>
   </component>
 </project>

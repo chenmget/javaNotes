@@ -6,26 +6,67 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="agent" />
+        <module name="zipkinserver1" />
         <module name="dubbo-common" />
+        <module name="agent" />
+        <module name="aop" />
+        <module name="zipkinserver2" />
+        <module name="netty" />
+        <module name="javase" />
+        <module name="serviceribbon" />
         <module name="dubbo-consumer" />
         <module name="dubbo-provider" />
-        <module name="javase" />
-        <module name="leetcode" />
-        <module name="netty" />
+        <module name="mybatis" />
+        <module name="eurekaclient" />
+        <module name="servicezuul" />
+        <module name="servicelucy" />
+        <module name="servicefeign" />
+        <module name="redisson" />
+        <module name="eurekaserver" />
         <module name="thread" />
+        <module name="leetcode" />
+        <module name="design" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
       <module name="agent" target="1.8" />
+      <module name="aop" target="1.8" />
+      <module name="design" target="1.8" />
       <module name="dubbo" target="1.8" />
       <module name="dubbo-common" target="1.8" />
       <module name="dubbo-consumer" target="1.8" />
       <module name="dubbo-provider" target="1.8" />
-      <module name="javase" target="1.5" />
+      <module name="eurekaclient" target="1.8" />
+      <module name="eurekaserver" target="1.8" />
+      <module name="javase" target="1.8" />
       <module name="leetcode" target="1.8" />
+      <module name="mybatis" target="1.8" />
       <module name="netty" target="1.8" />
+      <module name="redisson" target="1.8" />
+      <module name="servicefeign" target="1.8" />
+      <module name="servicelucy" target="1.8" />
+      <module name="serviceribbon" target="1.8" />
+      <module name="servicezuul" target="1.8" />
+      <module name="springboot" target="1.8" />
+      <module name="springCloud" target="1.8" />
       <module name="thread" target="1.8" />
+      <module name="zipkin" target="1.8" />
+      <module name="zipkinserver1" target="1.8" />
+      <module name="zipkinserver2" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="aop" options="-parameters" />
+      <module name="eurekaclient" options="-parameters" />
+      <module name="eurekaserver" options="-parameters" />
+      <module name="mybatis" options="-parameters" />
+      <module name="redisson" options="-parameters" />
+      <module name="servicefeign" options="-parameters" />
+      <module name="servicelucy" options="-parameters" />
+      <module name="serviceribbon" options="-parameters" />
+      <module name="servicezuul" options="-parameters" />
+      <module name="springboot" options="-parameters" />
+    </option>
   </component>
 </project>

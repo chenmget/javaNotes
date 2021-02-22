@@ -6,13 +6,25 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
+        <option value="$PROJECT_DIR$/javase/pom.xml" />
         <option value="$PROJECT_DIR$/thread/pom.xml" />
         <option value="$PROJECT_DIR$/netty/pom.xml" />
-        <option value="$PROJECT_DIR$/javase/pom.xml" />
         <option value="$PROJECT_DIR$/agent/pom.xml" />
+        <option value="$PROJECT_DIR$/zipkin/pom.xml" />
         <option value="$PROJECT_DIR$/dubbo/pom.xml" />
+        <option value="$PROJECT_DIR$/springCloud/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot/mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/design/pom.xml" />
         <option value="$PROJECT_DIR$/leetcode/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/springboot/seata/pom.xml" />
+        <option value="$PROJECT_DIR$/zipkin/server1/pom.xml" />
+        <option value="$PROJECT_DIR$/zipkin/zipkin-client/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
