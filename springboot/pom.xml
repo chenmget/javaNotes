@@ -11,6 +11,7 @@
     <modules>
         <module>redisson</module>
         <module>mybatis</module>
+        <module>aop</module>
     </modules>
 
     <parent>
